@@ -1,5 +1,8 @@
 var config = require('./config.json')
-var redisClient = require('redis').createClient(config.redis.port, config.redis.host)
+var redisClient = require('redis').createClient(
+    config.redis.port, config.redis.host,
+    {"password": config.redis.password, "db": config.redis.db}
+)
 var parse = require('co-body')
 var cors = require('koa-cors')
 var wrapper = require('co-redis')
