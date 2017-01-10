@@ -11,7 +11,7 @@ cat << EOF > config.json
         "host": "${REDIS_HOST}",
         "port": ${REDIS_PORT},
         "password": "${REDIS_PASSWD:-null}",
-        "db": ${REDIS_DB:-null}
+        "db": ${REDIS_DB:-0}
     },
     "port": ${PORT:-4000}
 }
