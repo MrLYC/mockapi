@@ -8,8 +8,8 @@ cd /mockapi
 cat << EOF > config.json
 {
     "redis": {
-        "host": "${REDIS_HOST}",
-        "port": ${REDIS_PORT},
+        "host": "${REDIS_HOST:-127.0.0.1}",
+        "port": ${REDIS_PORT:-6379},
         "password": "${REDIS_PASSWD:-null}",
         "db": ${REDIS_DB:-0}
     },
